@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import AddButton from '../AddButton/AddButton';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -16,6 +17,7 @@ export default class Map extends Component {
 		return (
 			// Important! Always set the container height explicitly
 			<div style={{ height: '100vh', width: '100%' }}>
+				<AddButton />
 				<GoogleMapReact
 					bootstrapURLKeys={{ key: 'AIzaSyDZ0Us2D2X0qtPSpTVL9xO9D5eW6Gq5xgE' }}
 					defaultCenter={this.props.center}
